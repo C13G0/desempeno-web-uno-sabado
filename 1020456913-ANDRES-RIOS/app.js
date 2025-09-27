@@ -13,7 +13,7 @@ function mostrarEstadisticas() {
 }
 
 // Llamada para verificar que funciona
-mostrarEstadisticas();
+/*mostrarEstadisticas();*/
 
 
 
@@ -40,13 +40,13 @@ const ganarExperiencia = (cantidadExp) => {
 }
 
 // Pruebas de las funciones
-recibirDanio(20);
+/*recibirDanio(20);
 ganarExperiencia(30);
 recibirDanio(50);
 ganarExperiencia(10);
 
 // Mostrar estadísticas al final
-mostrarEstadisticas();
+mostrarEstadisticas();*/
 
 
 
@@ -97,8 +97,8 @@ function diagnosticoHeroe() {
 }
 
 // Pruebas de la fase 3
-simularBatalla();
-diagnosticoHeroe();
+/*simularBatalla();
+diagnosticoHeroe();*/
 
 
 
