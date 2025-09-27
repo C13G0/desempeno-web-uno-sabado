@@ -100,3 +100,42 @@ function diagnosticoHeroe() {
 simularBatalla();
 diagnosticoHeroe();
 
+
+
+// Fase 4: Menú interactivo de aventura
+function iniciarAventura() {
+	while (true) {
+		let opcion = prompt(`Menú de Aventura:\n1 - Luchar contra un monstruo\n2 - Tomar poción de salud\n3 - Completar misión (ganar XP)\n4 - Ver diagnóstico del Héroe\n5 - Mostrar Estadísticas\n6 - Retirarse de la aventura`);
+		switch (opcion) {
+			case '1':
+				simularBatalla();
+				break;
+			case '2':
+				let restaurar = prompt("¿Cuántos puntos de salud quieres restaurar?");
+				restaurar = Number(restaurar);
+				puntosSalud += restaurar;
+				console.log(`Has restaurado ${restaurar} puntos de salud. Salud actual: ${puntosSalud} HP.`);
+				break;
+			case '3':
+				let xpGanada = prompt("¿Cuánta experiencia ganaste en la misión?");
+				xpGanada = Number(xpGanada);
+				ganarExperiencia(xpGanada);
+				break;
+			case '4':
+				diagnosticoHeroe();
+				break;
+			case '5':
+				mostrarEstadisticas();
+				break;
+			case '6':
+				console.log("¡Gracias por jugar! El héroe se retira de la aventura.");
+				return;
+			default:
+				console.log("Opción no válida");
+		}
+	}
+}
+
+// Unica llamada
+iniciarAventura();
+
